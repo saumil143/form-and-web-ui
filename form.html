@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<style>
+   *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size:smaller;
+}
+body{
+   min-height: 100vh;
+   display: flex;
+   align-items:center;
+   justify-content:center;
+   background-color:pink;
+}
+.container{
+   position: relative;
+   max-width: 1200px;
+   width: 100%;
+   padding: 25px ;
+   margin: 50px auto;
+   background-color: #fff;
+   box-shadow: 0 0 5px 0 white;
+   border-top: 5px solid rgb(5, 117, 245);
+}
+.container h1{
+   position: relative;
+   font-size: 40px;
+   font-weight: 600;
+}
+.container h1::before{
+   content: "";
+   position: relative;
+   left: 0;
+   bottom: -2px;
+   height: 3px;
+   width: 27px;
+
+}
+form{
+   font-feature-settings: "blwm";
+   text-align: center;
+   position: relative;
+   margin-top: 16px 15px;
+   min-height: 490px;
+   background-color: #fff;
+   overflow: hidden;
+   font-size:xx-large;
+   padding: 15px; 
+}
+.main_heading{
+   text-align: center;
+   padding: 15px;
+   
+}
+input[type="submit"]{
+   background-color: skyblue;
+   padding: 50px 50px;
+   border: none;
+   border-radius: 10px;
+   cursor:pointer;
+   width:35%;
+}
+input[type="submit"]:hover
+{
+    background-color:rgb(36, 101, 199);
+}
+input[type="text"],
+input[type="Email"],
+input[type="password"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"],
+select,
+datalist,
+textarea{
+   padding: 15px;
+   border-radius: 10px;
+   border: solid black 4px;
+}
+nput[type="radio"]{
+   border: none;
+   padding: 5px;
+}
+</style>
+<head>
+    <title>Home page</title>
+</head>
+
+<body> 
+    <div class="container">
+        <h1 class="main_heading">Registration Form</h1>
+    
+
+    <form>
+
+        FirstName : <input type="text" name="fname"  placeholder="First name" size="35"> <br><br>
+
+        Last Name : <input type="text" name="lname" placeholder="Last name" size="35"> <br><br>
+
+        Mobile : <input type="text" name="mobile" maxlength="10" placeholder="Enter mobile" size="35"> <br><br>
+
+        Email : <input type="email" name="Email" placeholder="Enter email" required size="35"><br><br> 
+ 
+        password : <input type="password" name="Enter password" placeholder="Creat New password" required> <br><br> 
+
+        
+
+        Gender : <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> FeMale <br><br>
+
+        Hobby : <input type="checkbox" name="hobby[]" value="lisen"> Play
+        <input type="checkbox" name="hobby[]" value="write"> Write
+        <input type="checkbox" name="hobby[]" value="play"> Play
+        <input type="checkbox" name="hobby[]" value="work"> Read 
+        <input type="checkbox" name="hobby[]" value="other">other <br><br>
+
+        profession : <select name="profession" >
+            <option value="student">student</option>
+            <option value="teacher">teacher</option>
+            <option value="docter">docter</option>
+            <option value="business man">business</option>
+            <option value="other ">other</option>
+        </select> <br><br>
+
+        Comment : <textarea name="comment" cols="60" rows="5" required></textarea> <br><br>
+
+        List : <input list="browsers" name="list1">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist> <br><br>
+
+        Upload file : <input type="file" name="file" multiple>
+
+
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+</div>
+</body>
+
+</html> 
